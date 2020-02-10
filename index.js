@@ -15,7 +15,7 @@ class PasswordChecker extends HTMLElement {
   template() {
     return html`
       <span>Your password is <strong>${this.isValid(this.password) ? 'valid 👍' : 'INVALID 👎'}</strong></span>
-      ${this.isValid(this.password) ?
+      ${this.isValid('') ?
         html`<div>Strength: <progress value=${5-3} max="5"</progress></div>` : ``}`;
 
   }
