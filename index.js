@@ -5,20 +5,6 @@ import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
 class PasswordChecker extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({mode: 'open'});
-    this.password = this.getAttribute('password');
-  }
-
-  get password() { return this._password; }
-
-  set password(value) {
-    this._password = value;
-    this.setAttribute('password', value);
-    this.update();
-  }
-
-  update() {
-    render(this.template(), this.shadowRoot, {eventContext: this});
   }
 
   isValid(passwd) {
